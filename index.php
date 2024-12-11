@@ -1,9 +1,8 @@
 <Html>
 <head>
     <title></title>
-    <script src="https://code.jquery.com/jquery-2.x-git.min.js"></script>
-    <script src="http://eray.info/demo/html-to-jpeg-php/js/html2canvas.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
     <style>
         .se-pre-con {
             position: fixed;
@@ -15,27 +14,27 @@
             background: url("img/loader.gif") center no-repeat #fff;
         }
     </style>
-
 </head>
 <body>
-    <div class="se-pre-con"></div>
-    <?php
-        include('HtmlToJpeg.php');
+<div class="se-pre-con"></div>
+<?php
 
-        $html2Jpeg = new HtmlToJpeg();
+include('HtmlToJpeg.php');
 
-        //Example code
-            $html2Jpeg->renderView("test.html");
-            $html2Jpeg->renderView("test.html");
-            $html2Jpeg->renderView("test.html");
-            $html2Jpeg->renderHtml("<h1>Test</h1><div style='width:200px;height:300px;background:blue'></div>");
-            $html2Jpeg->renderHtml("<h1>Test</h1><div style='width:200px;height:300px;background:blue'></div>");
-            $html2Jpeg->renderView("test.html");
-            $html2Jpeg->renderHtml("<h1>Test</h1><div style='width:200px;height:300px;background:blue'></div>");
+$html2Jpeg = new HtmlToJpeg();
 
+//Example code
+$html2Jpeg->renderView("test.html");
+$html2Jpeg->renderView("test.html");
+$html2Jpeg->renderView("test.html");
+$html2Jpeg->renderHtml("<h1>Test</h1><div style='width:200px;height:300px;background:blue'></div>");
+$html2Jpeg->renderHtml("<h1>Test</h1><div style='width:200px;height:300px;background:blue'></div>");
+$html2Jpeg->renderView("test.html");
+$html2Jpeg->renderHtml("<h1>Test</h1><div style='width:200px;height:300px;background:blue'></div>");
 
-        //Form creating
-        echo $html2Jpeg->output();
-    ?>
+//Form creating
+echo $html2Jpeg->output();
+
+?>
 </body>
 </Html>
